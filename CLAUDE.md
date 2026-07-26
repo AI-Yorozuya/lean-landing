@@ -10,6 +10,6 @@
 - **不碰真憑證**：`.env*` gitignore。
 - **危險 git 自律**：只 `git checkout -- <檔>`／`git restore` 復原單檔，絕不 `reset --hard`／`clean -fd`／`push -f`。
 
-## 教練正本與同步
+## 教練正本
 
-教練內容的**單一真相源＝ai-yorozuya `docs/5-課程/`**（coach-core：人設/beats/敘事皮/心智圖模板/氣質庫/行業範例庫）。本 repo 的 `.claude/skills/coach/` 由 `coach-sync` skill 從正本生成——**不手改這裡、改正本再 sync**（避免與 lean-stack 的教練漂移）。
+**教練內容正本＝本 repo `.claude/skills/coach/`**（landing 劇本／氣質庫／行業範例庫）——要改就直接改這裡（2026-07-26 拍板：劇本正本住各交付 repo、教練永不跨 repo 讀；coach-sync 機制已廢）。跨劇本設計理據（人設/beats/敘事皮的來歷）在 ai-yorozuya `docs/5-課程/`，作者參考用、runtime 不讀。
