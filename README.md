@@ -27,8 +27,16 @@ npm run deploy     # vite build → Cloudflare Pages，拿到 *.pages.dev 真網
 lean-landing/
 ├── index.html            單頁（title = 招牌名）
 ├── src/{App.vue,main.js,style.css}   Hero→亮點×3→關於→CTA；style.css :root = 換膚 token
-├── public/               favicon / 行業照片包
+├── public/               favicon（主視覺不放檔——見下方「圖片」）
 ├── vite.config.js        純前端，無 /api proxy
 ├── wrangler.toml         CF Pages 部署
 └── .claude/skills/coach/ 教練（landing speedrun；正本＝ai-yorozuya docs/5-課程，coach-sync 生成）
 ```
+
+## 圖片
+
+**種子不預載照片。** 主視覺預設是一組用主題 token 上色的內建圖形（`App.vue` 的 `hero-art`）——
+換氣質時它自己跟著變色，永遠不會出現破圖或不搭的佔位照，也沒有授權問題。
+
+玩家要放自己的照片：把圖丟進 `public/`，再把 `App.vue` 的 `site.hero` 改成 `'/你的檔名.jpg'`
+（教練代做）。這是刻意的順序——**先有一個好看的頁，再換成真的你**，不是一開始就卡在「我沒有照片」。
