@@ -4,8 +4,3 @@ dist/
 .env.*
 .DS_Store
 .wrangler/
-# 玩家進度檔（每個玩家自己的，不進種子）
-PROGRESS.md
-INTENT.md
-架構圖.md
-心智圖.md

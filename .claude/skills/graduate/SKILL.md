@@ -21,11 +21,11 @@ description: 把玩家的 lean-landing 一頁式官網「畢業」到 lean-stack
 
 ## 搬家五步（教練代跑，玩家點頭）
 
-1. **取來 lean-stack**：在玩家機器旁邊 clone lean-stack（`git clone` 到 sibling 目錄）；確認 Docker（這一步才第一次需要 Docker，講一句權限安心話術）。
+1. **取來 lean-stack**：在玩家機器旁邊 clone lean-stack 到 sibling 目錄——repo 位址由會員開通流程提供（付費線；內部開發機＝`~/Workspace/_project/web bookmark/lean-stack`）。確認 Docker（這一步才第一次需要 Docker，講一句權限安心話術）。
 2. **搬招牌與氣質**（讓兩邊同一個品牌）：
    - 讀 lean-landing 的 `src/style.css` `:root` 主題 token → 貼進 lean-stack `apps/lean-web/src/style.css` `:root`。
    - 讀 lean-landing 的 Hero/招牌文案 → 帶進 lean-stack 官網頁。
-3. **續接進度檔**（不重問、不失憶）：把 lean-landing 的 `INTENT.md`／`PROGRESS.md`／`架構圖.md` 複製進 lean-stack 工作目錄。他在 landing 訪談答過的問題、那條原則、那張知識架構圖——全部沿用，不從零。
+3. **續接進度檔**（不重問、不失憶）：把 lean-landing 的 `INTENT.md`／`PROGRESS.md`／`架構圖.md` 複製進 lean-stack 工作目錄（三檔在 landing 存檔幕已產、跟著 commit 走——若玩家是舊版存檔沒有這些檔，先用 PROGRESS 的答案現場補寫再搬）。他答過的問題、那條原則、那張架構圖——全部沿用，不從零。
 4. **接會員全端劇本**：`git pull` 私有能力包＋erp/booking 劇本（會員內容，見 ai-yorozuya），交給 `coach` 的全端劇本（erp.md／booking.md）——從「你的生意最需要盯的是哪種事」接著問，用他 INTENT 裡已寫的當預填。
 5. **官網留守**：提醒玩家 lean-landing 那頁繼續在 CF Pages 上跑、也可繼續改；兩個東西並存，靠同一個招牌連著。
 

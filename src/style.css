@@ -1,4 +1,4 @@
-/* 一頁式品牌官網——主題 token（scenario/landing 純前端種子）。
+/* 一頁式品牌官網——主題 token（本 repo 即純前端種子）。
    「選氣質」(Q3) = 只換下面 :root 這組 token。四組預設見檔尾註解，教練整段替換即可。
    預設 = 專業沉穩（中性、可安全套任何行業）。*/
 :root {
@@ -128,15 +128,28 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 40px); }
 }
 
 /* ────────────────────────────────────────────────────────────────
-   Q3 選氣質——教練把上面 :root（含 dark 兩處）整組換成下列其一：
+   Q3 選氣質——教練把「四個 token block 全換」：:root、@media dark、
+   [data-theme=light]、[data-theme=dark]（只換一半＝深色模式會壞）。
 
-   極簡黑白：--bg #fff / --surface #f4f4f5 / --ink #0a0a0a / --muted #6b7280
-             --accent #0a0a0a / --accent-ink #fff / --line #e5e5e5
-             --serif 'Noto Sans TC'（標題也用無襯線、拚留白）
-   溫暖手作：--bg #fbf7f0 / --surface #f3ebdd / --ink #3a2c1d / --muted #8a765d
-             --accent #b5651d / --accent-ink #fff / --line #e8dcc8 / --serif 'Noto Serif TC'
-   專業沉穩：（目前預設）
-   明亮活潑：--bg #fff / --surface #fff5f0 / --ink #1a1a2e / --muted #6b7280
-             --accent #ff5a5f / --accent-ink #fff / --line #ffe0d6 / --radius 20px
-   （深色版 token 依比例調暗即可；貼網站參考路則由教練從該站抽色。）
+   極簡黑白 light：--bg #fff / --surface #f4f4f5 / --ink #0a0a0a / --muted #6b7280
+                  --accent #0a0a0a / --accent-ink #fff / --line #e5e5e5
+                  --serif 'Noto Sans TC'（標題也用無襯線、拚留白）
+   極簡黑白 dark ：--bg #0a0a0a / --surface #161616 / --ink #f5f5f5 / --muted #9ca3af
+                  --accent #f5f5f5 / --accent-ink #0a0a0a / --line #262626
+
+   溫暖手作 light：--bg #fbf7f0 / --surface #f3ebdd / --ink #3a2c1d / --muted #8a765d
+                  --accent #b5651d / --accent-ink #fff / --line #e8dcc8 / --serif 'Noto Serif TC'
+   溫暖手作 dark ：--bg #201812 / --surface #2a2017 / --ink #f3ead9 / --muted #b3a186
+                  --accent #d98b4a / --accent-ink #201812 / --line #3a2f22
+
+   專業沉穩：＝目前預設（light/dark 都已在上面四個 block）。
+
+   明亮活潑 light：--bg #fff / --surface #fff5f0 / --ink #1a1a2e / --muted #6b7280
+                  --accent #ff5a5f / --accent-ink #fff / --line #ffe0d6 / --radius 20px
+   明亮活潑 dark ：--bg #17171f / --surface #221d26 / --ink #f5f3f7 / --muted #a3a0ad
+                  --accent #ff6b70 / --accent-ink #17171f / --line #332b35 / --radius 20px
+
+   Q3-參考路抽新氣質時，dark 推導規則：bg＝近黑帶一絲主色調、ink 亮、
+   accent 提亮 10–20%（accent-ink 反轉）、line 低對比。light＋dark 一起
+   寫齊四個 block，並整組（含兩色）沉澱進 landing-氣質庫.md。
    ──────────────────────────────────────────────────────────────── */

@@ -1,14 +1,14 @@
 <script setup>
-// 一頁式品牌官網——純前端起手種子（scenario/landing）。
-// 教練照玩家的五個答案，只改下面這個 site 設定物件 + style.css 的主題 token。
+// 一頁式品牌官網——純前端起手種子（本 repo main 即種子）。
+// 教練照對話答案（取名＋事實題／Q1 行業／Q3 氣質／Q4 怎麼找你），只改 site 物件 + style.css 的 token（四個 block 全換）。
 // 純展示、不打後端 → npm run dev 就跑、npm run build 出靜態檔、免 Docker/DB。
-// 玩家若選「要收名單」的全端版，教練才另接 /api/v1/web/inquiry（見 scenarios/landing.md）。
+// 「要收名單/預約」＝畢業訊號：記升級意向、走 graduate 到 lean-stack——本 repo 永不加後端。
 import { ref } from 'vue'
 
-// ── 教練改這裡（來自對話 Q1/Q2/Q3/Q4）───────────────────────────
+// ── 教練改這裡（來自對話答案）─────────────────────────────────
 const site = {
   brand: '你的招牌',                          // 取名（序章）
-  tagline: '一句話說清楚，你替誰解決什麼。',    // Q2 標語（教練代擬）
+  tagline: '一句話說清楚，你替誰解決什麼。',    // 標語（教練代擬）
   intro: '把你最想讓人知道的一段話放這裡——你是誰、為什麼值得信任。',
   // Q4「客人怎麼找你」決定這顆按鈕（純前端＝連結）：
   cta: { label: '聯絡我', href: 'mailto:hello@example.com' },
