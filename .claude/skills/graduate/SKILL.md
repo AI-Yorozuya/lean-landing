@@ -1,11 +1,11 @@
 ---
 name: graduate
-description: 把玩家的 lean-landing 一頁式官網「畢業」到 lean-stack 全端生意系統，續接不斷（招牌/氣質/INTENT/心智圖搬過去，官網留在 CF Pages 當門面）。當 lean-landing 玩家說要「收名單自己管/管客人/接單/讓客人預約/蓋真系統」時用。
+description: 把玩家的 lean-landing 一頁式官網「畢業」到 lean-stack 全端生意系統，續接不斷（招牌/氣質/INTENT/知識架構圖搬過去，官網留在 CF Pages 當門面）。當 lean-landing 玩家說要「收名單自己管/管客人/接單/讓客人預約/蓋真系統」時用。
 ---
 
 # graduate：一頁式官網 → 全端生意系統（續接不斷）
 
-玩家在 lean-landing 做出了一頁官網、上線了。現在他想要「自己管名單/管客人/接單」——那是全端、是**另一個交付物**。這支 skill 帶他畢業到 lean-stack，**不製造 repo-hop 斷崖**：官網留在網路上當門面，生意系統在 lean-stack 新長，他的招牌/氣質/意圖/心智圖全部搬過去、續接。
+玩家在 lean-landing 做出了一頁官網、上線了。現在他想要「自己管名單/管客人/接單」——那是全端、是**另一個交付物**。這支 skill 帶他畢業到 lean-stack，**不製造 repo-hop 斷崖**：官網留在網路上當門面，生意系統在 lean-stack 新長，他的招牌/氣質/意圖/知識架構圖全部搬過去、續接。
 
 > 這是「升級一個使用者的專案、續接不斷」的通用原語＝正規化即服務／母機的一塊（設計正本＝ai-yorozuya `docs/5-課程/`）。lean-landing→lean-stack 是它第一個 instance；日後 lean-stack 內版本升級、跨棧搬遷同一支演進。
 
@@ -25,13 +25,13 @@ description: 把玩家的 lean-landing 一頁式官網「畢業」到 lean-stack
 2. **搬招牌與氣質**（讓兩邊同一個品牌）：
    - 讀 lean-landing 的 `src/style.css` `:root` 主題 token → 貼進 lean-stack `apps/lean-web/src/style.css` `:root`。
    - 讀 lean-landing 的 Hero/招牌文案 → 帶進 lean-stack 官網頁。
-3. **續接進度檔**（不重問、不失憶）：把 lean-landing 的 `INTENT.md`／`PROGRESS.md`／`心智圖.md` 複製進 lean-stack 工作目錄。他在 landing 答過的六問、那條鐵則、那張心智圖——全部沿用，不從零。
+3. **續接進度檔**（不重問、不失憶）：把 lean-landing 的 `INTENT.md`／`PROGRESS.md`／`架構圖.md` 複製進 lean-stack 工作目錄。他在 landing 訪談答過的問題、那條原則、那張知識架構圖——全部沿用，不從零。
 4. **接會員全端劇本**：`git pull` 私有能力包＋erp/booking 劇本（會員內容，見 ai-yorozuya），交給 `coach` 的全端劇本（erp.md／booking.md）——從「你的生意最需要盯的是哪種事」接著問，用他 INTENT 裡已寫的當預填。
 5. **官網留守**：提醒玩家 lean-landing 那頁繼續在 CF Pages 上跑、也可繼續改；兩個東西並存，靠同一個招牌連著。
 
-## 續接鐵律
+## 續接紀律
 
-- **零失憶**：INTENT/PROGRESS/心智圖 續用，不重問六問。心智圖從「一頁式頁面圖」升級成「生意系統包圖」時，是**在同一張圖上加**（抗腐三步：讀關聯→報炸半徑→回填），不是重畫。
+- **零失憶**：INTENT/PROGRESS/架構圖 續用，訪談答過的問題不重問。知識架構圖從「一頁式頁面圖」升級成「生意系統包圖」時，是**在同一張圖上加**（抗腐三步：讀關聯→報炸半徑→回填），不是重畫。
 - **官網不動**：畢業不碰 lean-landing 那頁——它是門面，永遠留著。
 - **付費界線在這**：搬進 lean-stack ＋私有劇本＋（要人顧就）managed ＝付費/會員；code 全開源，gate 在方法與服務。
 
