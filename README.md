@@ -16,21 +16,11 @@
 
 **1. 裝 [Claude Code](https://claude.com/claude-code)** —— 照它網站上的指示裝，這是唯一要你自己裝的東西。
 
-**2. 把種子抓下來**
+**2. 打開它，把這句話貼給它：**
 
-```bash
-git clone https://github.com/AI-Yorozuya/lean-landing.git
-```
+> 我要做一頁式官網，種子在這裡：https://github.com/AI-Yorozuya/lean-landing
 
-**3. 進資料夾、叫它出來**
-
-```bash
-cd lean-landing && claude
-```
-
-**4. 跟它說一句「開始」**
-
-就這樣。接下來它會帶你一步一步走。
+就這樣。它會把種子抓下來、開始問你問題，一步一步帶你走。
 
 ## 接下來都是對話
 
@@ -48,7 +38,7 @@ cd lean-landing && claude
 
 ## 關掉之後想再改
 
-隨時回來：進資料夾打 `claude`，跟它說一聲「繼續」。它記得你上次做到哪、選了什麼。
+隨時回來：在 `lean-landing` 資料夾裡打開 Claude Code，說一聲「繼續」。它記得你上次做到哪、選了什麼。
 
 ## 這頁做不到的事
 
