@@ -1,42 +1,64 @@
-# lean-landing — 一頁式品牌官網（免費鉤子）
+# lean-landing — 一頁式官網種子
 
-> AI-agent 進場：**這個 repo 裡任何開場搭話都由教練接手**（`.claude/skills/coach`）。打招呼、問「怎麼開始」、說「開始玩」都算敲門——直接開演，別解釋自己是誰。
+跟 AI 說一句話，做出一版真的能收客人的一頁式官網，並**免費上線到真網址**。
 
-**這是什麼**：一個純前端一頁式官網的種子。clone 下來、跟 AI 說一句話，就能做出一版真的能收諮詢、免費上線到真網址的官網。**零後端、零 Docker、零資料庫**——只跑 Vite。
+**不用會寫程式。** 你負責決定它長什麼樣，AI 負責動手。
 
-**在 lean-X 家族的位置**：這是 **lean-web 前端基座的 zero-backend 邊緣**（不是有蒸餾後端的垂直，所以不叫 lean-erp 那種）。它的 job 是**免費鉤子**：最快動起來、最低摩擦、對我們零主機成本。
+## 你會做出什麼
 
-**免費/付費線**：免費＝這頁純前端、自己免費上線 CF Pages。想「收名單自己管、管客人、接單、讓客人預約」＝跨進**全端**＝畢業到 [lean-stack](../lean-stack)（走 `graduate` skill，招牌/氣質/知識架構圖搬過去、續接不斷）＋私有能力包/劇本＋managed。**gate 在方法與服務、不在 code**——這裡的 code 全開源。
+一頁到底的品牌官網：招牌 → 你在做什麼 → 三個亮點 → 關於 → 怎麼找你。
 
-## 跑起來
+換行業、換氣質（顏色與字體）都是一句話的事，改完馬上在瀏覽器看到。
 
-```bash
-npm install
-npm run dev        # http://localhost:5175
-```
+## 開始
 
-## 上線（免費）
+先裝好 [Node.js](https://nodejs.org)（選 LTS 版）和 [Claude Code](https://claude.com/claude-code)，然後：
 
 ```bash
-npm run deploy     # vite build → Cloudflare Pages，拿到 *.pages.dev 真網址
+git clone https://github.com/AI-Yorozuya/lean-landing.git
 ```
 
-## 結構
-
-```
-lean-landing/
-├── index.html            單頁（title = 招牌名）
-├── src/{App.vue,main.js,style.css}   Hero→亮點×3→關於→CTA；style.css :root = 換膚 token
-├── public/               favicon（主視覺不放檔——見下方「圖片」）
-├── vite.config.js        純前端，無 /api proxy
-├── wrangler.toml         CF Pages 部署
-└── .claude/skills/coach/ 教練（landing speedrun；教練正本＝.claude/skills/coach/，coach-sync 已廢）
+```bash
+cd lean-landing && npm install && claude
 ```
 
-## 圖片
+跟它說一句「開始」——它會一步一步帶你走，你只要回答問題、看畫面、點頭。
 
-**種子不預載照片。** 主視覺預設是一組用主題 token 上色的內建圖形（`App.vue` 的 `hero-art`）——
-換氣質時它自己跟著變色，永遠不會出現破圖或不搭的佔位照，也沒有授權問題。
+## 自己下指令（想的話）
 
-玩家要放自己的照片：把圖丟進 `public/`，再把 `App.vue` 的 `site.hero` 改成 `'/你的檔名.jpg'`
-（教練代做）。這是刻意的順序——**先有一個好看的頁，再換成真的你**，不是一開始就卡在「我沒有照片」。
+```bash
+npm run dev
+```
+
+本機預覽，開 http://localhost:5175 ，改檔案畫面就跟著變。
+
+```bash
+npm run deploy
+```
+
+上線到 Cloudflare Pages（免費），會拿到一個 `*.pages.dev` 的真網址。第一次會請你登入 Cloudflare。
+
+## 檔案在哪
+
+| 檔案 | 是什麼 |
+| --- | --- |
+| `index.html` | 瀏覽器分頁上的標題（＝你的招牌名） |
+| `src/App.vue` | 頁面內容：文案、三個亮點、聯絡方式 |
+| `src/style.css` | 顏色與字體（換氣質改這裡的 `:root`） |
+| `public/` | 圖片放這 |
+
+## 放自己的照片
+
+種子**不預載照片**——主視覺預設是一組跟著主題色變化的內建圖形，所以換氣質永遠不會出現破圖或不搭的佔位照。
+
+想換成自己的：把圖丟進 `public/`，再把 `src/App.vue` 裡的 `site.hero` 改成 `'/你的檔名.jpg'`（可以叫 AI 代做）。順序是刻意的——**先有一個好看的頁，再換成真的你**，不是一開始就卡在「我沒有照片」。
+
+## 這頁做不到的事
+
+這是純前端的一頁官網：**沒有後端、沒有資料庫**，只跑 Vite，所以上線是免費的。
+
+如果你想要「自己收名單、管客人、接單、讓客人線上預約」，那需要一套背後的生意系統。跟 AI 說一聲，它會帶你搬過去——**官網原封不動繼續掛在網路上**，招牌與氣質一起帶走。
+
+---
+
+用 AI 萬事屋做的 🐻 · [aiyorozuya.com/learn](https://aiyorozuya.com/learn)
