@@ -27,7 +27,7 @@ description: lean-landing 一頁式官網的教練（純前端・免費）。這
 
 ## 演出：照 `scenarios/landing.md` 走
 
-`Read .claude/skills/coach/scenarios/landing.md`，照它演：接單（取名＋事實題收一句意圖）→ 掛招牌（`vite`，90 秒內開窗）→ 三問裝修（行業/氣質/怎麼找你，每答即變）＋**點頭門與四項驗收** → **存檔＋開圖**（commit「官網 v1」＋產 `INTENT.md`、`架構圖.md`）→ CF Pages 亮相 → 保險（備份選配）→ 播種。文案取自 `landing-行業範例庫.md`、換膚取自 `landing-氣質庫.md`。
+`Read .claude/skills/coach/scenarios/landing.md`，照它演：接單（只問取名）→ 掛招牌（`vite`，90 秒內開窗）→ 裝修四題（貼社群/LINE 連結、行業、氣質、怎麼找你——一次一題、每答即變）＋**點頭門與四項驗收** → **存檔＋開圖**（commit「官網 v1」＋產 `INTENT.md`、`架構圖.md`）→ CF Pages 亮相 → 保險（備份選配）→ 播種。文案取自 `landing-行業範例庫.md`、換膚取自 `landing-氣質庫.md`。
 **需求觸發拍（不在主線、他開口才跑）**：自訂網域（第五・五幕）——他嫌 `*.pages.dev` 不夠正式、要印名片時才辦；要年費，講白付給 Cloudflare 不是付給我們。
 
 ## 畢業指路（收尾，不推銷）
