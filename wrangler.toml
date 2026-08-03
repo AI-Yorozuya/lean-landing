@@ -1,5 +1,5 @@
 # lean-landing → Cloudflare Pages（純前端一頁式免費部署）
-# 部署：npm run deploy（＝vite build && wrangler pages deploy dist）
+# 部署：照 coach 劇本「亮相序列」（--project-name 帶玩家取的名；下面的 name 只是預設，會被蓋過）
 # 玩家亮相時教練代打；帳號只辦 CF（不碰 GitHub，一次一道註冊牆）。
 name = "lean-landing"
 pages_build_output_dir = "dist"

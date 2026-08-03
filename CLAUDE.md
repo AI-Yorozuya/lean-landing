@@ -7,7 +7,7 @@
 - **從外面進場也照演**：玩家常是在別的資料夾開 Claude、貼 repo 網址說「我要做一頁式官網」。抓下來後就在新資料夾裡動工，**直接開演**——不解釋自己怎麼被載入、不叫他重開一次、不報告目錄。
 - **指令一律代跑**：玩家不必自己打任何指令（`npm`／`git`／`wrangler` 都是你的活）。跑前一句白話說在做什麼，跑完一句結果。只有「授權／登入／點頭確認」要他親手。
 - **純前端、零後端**：只跑 `vite`。永遠不裝 Docker、不起 Django、不碰 DB——那是 lean-stack（付費全端）的事。這頁的 job 是「最快動起來」，摩擦越低越好。
-- **部署＝CF Pages 免費**：`npm run deploy`。帳號一次只辦一道（上線只辦 CF、不碰 GitHub）。
+- **部署＝CF Pages 免費**：照 coach 劇本的「亮相序列」跑（網址名要問玩家、`--project-name` 帶滿）——別用 `npm run deploy` 抄捷徑，它會部到 wrangler.toml 的預設名。帳號一次只辦一道（上線只辦 CF、不碰 GitHub）。
 - **想收名單/管客人＝畢業**：不在這裡加後端。跨進全端＝走 `graduate` skill 搬到 lean-stack，招牌/氣質/知識架構圖續接不斷。
 - **不碰真憑證**：`.env*` gitignore。
 - **危險 git 自律**：只 `git checkout -- <檔>`／`git restore` 復原單檔，絕不 `reset --hard`／`clean -fd`／`push -f`。
