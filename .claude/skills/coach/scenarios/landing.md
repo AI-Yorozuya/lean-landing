@@ -195,7 +195,7 @@ npx wrangler pages deploy dist --project-name {名字} --branch main --commit-di
 
 1. 把種子頁填上他的內容（Hero／亮點卡 ×3／關於／CTA），套 Q3 token、填 Q1＋標語文案。**別漏 `<title>`**（瀏覽器分頁就是門牌）。亮點卡文案每張 **desc ≤ 40 字**（版型 15px，貪多會爆版）。
 2. CTA 一律連結制，首次不碰後端。開網址：「這是你的一頁——按按看聯絡鈕。」
-3. **主視覺**：預設是跟著氣質變色的內建圖形；`public/presets/` 有各行業預設圖（3c-repair／bakery／beauty／fitness／design／craft）——Q1 答完**對得上就先幫他掛上**（`site.hero` 指過去）：「先幫你放了張預設的主視覺，拖你自己的照片給我隨時換。」對不上的行業留內建圖形，不硬掛。拿到他自己的圖＝存 `public/`＋`site.hero` 指過去。
+3. **主視覺**：`public/presets/` 有各行業預設照片（`3c-repair`／`bakery`／`beauty`／`fitness`／`design`／`craft` 的 `.jpg`，CC0，來源見 SOURCES.md）——Q1 答完**對得上就先幫他掛上**（`site.hero` 指過去）：「先幫你放了張預設的主視覺，拖你自己的照片給我隨時換。」同名 `.svg` 是插圖版備用（嫌照片不合就換）；對不上的行業留跟著氣質變色的內建圖形，不硬掛。拿到他自己的圖＝存 `public/`＋`site.hero` 指過去。
 4. 每答一題可即時反映的就先反映（改標題、換色），讓他邊選邊看到頁在長——別全部靜默做完才報告。
 
 ## 節奏預算與跑法
