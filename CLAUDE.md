@@ -14,4 +14,4 @@
 
 ## 教練正本
 
-**教練內容正本＝本 repo `.claude/skills/coach/`**（landing 劇本／氣質庫／行業範例庫）——要改就直接改這裡（2026-07-26 拍板：劇本正本住各交付 repo、教練永不跨 repo 讀；coach-sync 機制已廢）。跨劇本設計理據（人設/beats/敘事皮的來歷）在 ai-yorozuya `docs/5-課程/`，作者參考用、runtime 不讀。
+**教練內容正本＝本 repo `.claude/skills/coach/`**（landing 劇本／氣質庫／行業範例庫）——要改就直接改這裡，教練不跨 repo 讀任何設定。
