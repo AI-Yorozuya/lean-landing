@@ -1,0 +1,39 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="烘焙">
+  <rect width="1200" height="800" fill="#f6efe6"/>
+  <circle cx="1000" cy="160" r="200" fill="#efe3d2"/>
+  <circle cx="140" cy="680" r="170" fill="#efe3d2"/>
+  <!-- 蒸氣 -->
+  <g stroke="#d9c6ac" stroke-width="10" fill="none" stroke-linecap="round">
+    <path d="M520 200 q-24 -40 0 -80 q24 -40 0 -80"/>
+    <path d="M620 220 q-24 -40 0 -80 q24 -40 0 -80"/>
+    <path d="M720 200 q-24 -40 0 -80 q24 -40 0 -80"/>
+  </g>
+  <!-- 圓麵包 -->
+  <ellipse cx="620" cy="470" rx="270" ry="180" fill="#c98a4b"/>
+  <ellipse cx="620" cy="440" rx="270" ry="160" fill="#dda05f"/>
+  <g stroke="#f6efe6" stroke-width="12" stroke-linecap="round" fill="none">
+    <path d="M480 380 q30 40 0 90"/>
+    <path d="M600 360 q30 45 0 100"/>
+    <path d="M720 380 q30 40 0 90"/>
+  </g>
+  <!-- 可頌 -->
+  <g transform="rotate(-12 300 560)">
+    <ellipse cx="300" cy="560" rx="130" ry="70" fill="#b97a3e"/>
+    <path d="M190 560 q110 -90 220 0 q-110 90 -220 0z" fill="#d29455"/>
+    <g stroke="#b97a3e" stroke-width="8" fill="none">
+      <path d="M245 512 q-18 48 0 96"/>
+      <path d="M300 500 q-20 60 0 120"/>
+      <path d="M355 512 q18 48 0 96"/>
+    </g>
+  </g>
+  <!-- 麥穗 -->
+  <g transform="rotate(18 940 560)" fill="#d9c6ac">
+    <rect x="934" y="440" width="12" height="240" rx="6"/>
+    <ellipse cx="915" cy="470" rx="26" ry="14" transform="rotate(-35 915 470)"/>
+    <ellipse cx="965" cy="470" rx="26" ry="14" transform="rotate(35 965 470)"/>
+    <ellipse cx="912" cy="520" rx="26" ry="14" transform="rotate(-35 912 520)"/>
+    <ellipse cx="968" cy="520" rx="26" ry="14" transform="rotate(35 968 520)"/>
+    <ellipse cx="910" cy="570" rx="26" ry="14" transform="rotate(-35 910 570)"/>
+    <ellipse cx="970" cy="570" rx="26" ry="14" transform="rotate(35 970 570)"/>
+  </g>
+</svg>

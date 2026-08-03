@@ -1,0 +1,27 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="接案設計">
+  <rect width="1200" height="800" fill="#eef1f6"/>
+  <circle cx="1000" cy="160" r="210" fill="#e1e6ef"/>
+  <circle cx="150" cy="690" r="170" fill="#e1e6ef"/>
+  <!-- 筆電 -->
+  <g>
+    <rect x="380" y="260" width="440" height="290" rx="22" fill="#2b3a55"/>
+    <rect x="404" y="284" width="392" height="242" rx="10" fill="#f4f7fb"/>
+    <path d="M330 550 h540 l40 70 q6 16 -14 16 h-592 q-20 0 -14 -16z" fill="#8f9bb0"/>
+    <!-- 螢幕上的版面色塊 -->
+    <rect x="430" y="310" width="160" height="90" rx="8" fill="#5c7fb8"/>
+    <rect x="606" y="310" width="164" height="20" rx="8" fill="#c5cfdd"/>
+    <rect x="606" y="342" width="130" height="20" rx="8" fill="#c5cfdd"/>
+    <rect x="606" y="374" width="150" height="20" rx="8" fill="#c5cfdd"/>
+    <rect x="430" y="418" width="340" height="20" rx="8" fill="#dfe5ee"/>
+    <rect x="430" y="450" width="300" height="20" rx="8" fill="#dfe5ee"/>
+    <rect x="430" y="486" width="120" height="28" rx="12" fill="#5c7fb8"/>
+  </g>
+  <!-- 游標 -->
+  <path d="M812 470 l54 132 20 -52 52 -20z" fill="#2b3a55"/>
+  <!-- 鉛筆 -->
+  <g transform="rotate(40 280 380)">
+    <rect x="260" y="260" width="40" height="200" rx="8" fill="#e0b25c"/>
+    <path d="M260 460 h40 l-20 46z" fill="#2b3a55"/>
+    <rect x="260" y="240" width="40" height="24" rx="6" fill="#5c7fb8"/>
+  </g>
+</svg>
