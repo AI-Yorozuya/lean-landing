@@ -28,11 +28,11 @@ const isLocal = location.protocol === 'file:' ||
 if (isLocal) {
   const btn = document.createElement('button')
   btn.className = 'label-toggle'
-  btn.textContent = '顯示名稱'
+  btn.textContent = '顯示名字'
   btn.title = '每一塊都有名字，想改哪裡就跟 AI 說那個名字'
   btn.addEventListener('click', () => {
     const on = document.body.toggleAttribute('data-labels')
-    btn.textContent = on ? '隱藏名稱' : '顯示名稱'
+    btn.textContent = on ? '隱藏名字' : '顯示名字'
   })
   document.body.appendChild(btn)
 }
