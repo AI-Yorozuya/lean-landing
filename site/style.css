@@ -1,19 +1,25 @@
-/* 一頁式品牌官網——共用樣式與主題 token。
-   三刀口：改內容＝index.html（改完 grep 全出現點）、換氣質＝本檔 token、
+/* 一頁式品牌官網——設定區＋共用樣式。
+   三刀口：改內容＝index.html（那裡有元件名對照）、換氣質＝本檔設定區、
    動骨架＝layout-desktop.css／layout-mobile.css（桌機、手機各自打造，互不波及）。
-   「選氣質」(Q3) = 只換下面 :root 這組 token。四組預設見檔尾註解，教練整段替換即可。
-   預設 = 專業沉穩（中性、可安全套任何行業）。*/
+
+   ┌─ 設定區：整站的顏色與字型旋鈕，全在這 10 行 ──────────────┐
+   │ 想換氣質，跟 AI 說「換成溫暖手作」就好——它會把四組全換掉。 │
+   │ 想單獨微調，也可以指名：「主色再深一點」「圓角改大」。      │
+   │ ⚠ 四個 block 要一起換（下面 :root ×2、@media dark、       │
+   │   [data-theme]×2），只換一半＝深色模式會壞。               │
+   └──────────────────────────────────────────────────────────┘
+   四組現成氣質的完整色值見檔尾註解。預設＝專業沉穩（中性、任何行業都安全）。*/
 :root {
-  --bg:      #ffffff;
-  --surface: #f5f6f8;
-  --ink:     #16202c;
-  --muted:   #5a6774;
-  --accent:  #2f5d8a;
-  --accent-ink: #ffffff;
-  --line:    #e4e8ec;
-  --radius:  14px;
-  --serif: 'Noto Serif TC', Georgia, serif;
-  --sans:  'Noto Sans TC', system-ui, sans-serif;
+  --bg:      #ffffff;   /* 底色：整頁的背景 */
+  --surface: #f5f6f8;   /* 卡片底：亮點卡那三張的底色 */
+  --ink:     #16202c;   /* 主文字：標題與內文 */
+  --muted:   #5a6774;   /* 次要文字：說明、頁尾這類比較淡的字 */
+  --accent:  #2f5d8a;   /* 主色：按鈕、重點、分頁圖示——整站唯一的亮點 */
+  --accent-ink: #ffffff;/* 主色上的字：按鈕裡的字色，要跟主色對比夠 */
+  --line:    #e4e8ec;   /* 線條：分隔線、外框 */
+  --radius:  14px;      /* 圓角：卡片與圖片的圓角大小 */
+  --serif: 'Noto Serif TC', Georgia, serif;      /* 標題字型 */
+  --sans:  'Noto Sans TC', system-ui, sans-serif;/* 內文字型 */
 }
 @media (prefers-color-scheme: dark) {
   :root {
