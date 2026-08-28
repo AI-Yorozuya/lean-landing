@@ -68,25 +68,17 @@
   <section class="hero" data-name="主視覺區 hero">
     <div class="hero-text">
       <!-- 主標 hero title：一句話說清楚替誰解決什麼（教練代擬，玩家點頭） -->
-      <h1 data-name="主標 hero title">一句話說清楚，你替誰解決什麼。</h1>
+      <h1 data-name="主標 hero title">一句話，說清楚你在做什麼。</h1>
       <!-- 副標 hero text -->
-      <p class="lede" data-name="副標 hero text">把你最想讓人知道的一段話放這裡——你是誰、為什麼值得信任。</p>
+      <p class="lede" data-name="副標 hero text">再兩三句話，讓客人知道你是誰、做多久了、為什麼可以放心找你。</p>
       <!-- 主鈕 hero cta（整頁最重要的一顆，只有一種動作）-->
       <a class="cta" data-name="主鈕 hero cta" href="mailto:hello@example.com">聯絡我</a>
     </div>
     <div class="hero-art" data-name="主圖 hero image">
-      <!-- 【主視覺】換玩家的照片：整段 svg 換成 <img src="./你的檔名.jpg" alt="你的招牌">
-           行業對得上就先掛 ./presets/ 的預設照。內建 SVG 用主題 token 上色，換氣質自己跟著變。 -->
-      <svg viewBox="0 0 400 400" role="img" aria-label="你的招牌">
-        <circle cx="230" cy="150" r="120" fill="var(--accent)" opacity=".14" />
-        <circle cx="230" cy="150" r="74" fill="var(--accent)" opacity=".22" />
-        <rect x="40" y="196" width="250" height="150" rx="18" fill="var(--surface)" stroke="var(--line)" />
-        <rect x="66" y="226" width="112" height="11" rx="5.5" fill="var(--accent)" />
-        <rect x="66" y="252" width="196" height="8" rx="4" fill="var(--muted)" opacity=".32" />
-        <rect x="66" y="272" width="160" height="8" rx="4" fill="var(--muted)" opacity=".32" />
-        <rect x="66" y="302" width="84" height="24" rx="12" fill="var(--accent)" />
-        <circle cx="316" cy="286" r="30" fill="var(--accent)" opacity=".16" />
-      </svg>
+      <!-- 主圖 hero image：預設先掛一張，Q1 答完換成對得上的行業預設照
+           （presets 有 bakery／beauty／fitness／design／craft／3c-repair）。
+           玩家給了自己的照片＝存進 site/ 再把 src 指過去。 -->
+      <img src="./presets/bakery.jpg" alt="你的招牌" />
     </div>
   </section>
 
@@ -94,16 +86,16 @@
   <section id="features" class="features" data-name="亮點區 features">
     <article class="card" data-name="亮點卡 card">
       <!-- 亮點卡 card：卡標題 card title ＋ 卡說明 card text（每張 ≤ 40 字）-->
-      <h3>亮點一</h3>
-      <p>你最強的一件事，用客人聽得懂的話講。</p>
+      <h3>你最拿手的</h3>
+      <p>用客人聽得懂的話講，不要行話。</p>
     </article>
     <article class="card">
-      <h3>亮點二</h3>
-      <p>第二個讓人選你的理由。</p>
+      <h3>客人常說的好</h3>
+      <p>他們回頭的理由，通常就是這個。</p>
     </article>
     <article class="card">
-      <h3>亮點三</h3>
-      <p>第三個。三張剛好，別貪多。</p>
+      <h3>跟別人不一樣的</h3>
+      <p>三個剛好，別貪多。</p>
     </article>
   </section>
 
@@ -112,7 +104,7 @@
     <!-- 關於標題 about title -->
     <h2>關於 你的招牌</h2>
     <!-- 關於內文 about text -->
-    <p>把你最想讓人知道的一段話放這裡——你是誰、為什麼值得信任。</p>
+    <p>再兩三句話，讓客人知道你是誰、做多久了、為什麼可以放心找你。</p>
     <!-- 次要鈕 about cta（外框樣式，比主鈕安靜）-->
     <a class="cta ghost" href="mailto:hello@example.com">聯絡我</a>
   </section>

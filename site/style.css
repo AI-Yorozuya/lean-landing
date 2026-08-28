@@ -132,6 +132,15 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 40px); }
 [data-labels] .nav [data-name]::before { top: auto; bottom: -9px; }
 /* 主視覺緊接在 sticky 導覽列下面：名牌收進自己的上留白，不然會被導覽列蓋住 */
 [data-labels] .hero::before { top: 6px; }
+/* 開關按鈕本人（只在本機由 script.js 生出來）*/
+.label-toggle {
+  position: fixed; right: 16px; bottom: 16px; z-index: 40;
+  background: var(--ink); color: var(--bg); border: none;
+  font-family: var(--sans); font-size: 12px; font-weight: 600;
+  padding: 9px 14px; border-radius: 100px; cursor: pointer;
+  opacity: .55; transition: opacity .15s;
+}
+.label-toggle:hover { opacity: 1; }
 
 /* ────────────────────────────────────────────────────────────────
    Q3 選氣質——教練把「四個 token block 全換」：:root、@media dark、

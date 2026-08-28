@@ -20,9 +20,19 @@ document.querySelectorAll('.links a[href^="#"], .brand').forEach((a) => {
   })
 })
 
-// 認識元件模式：網址加 #labels 就在畫面上標出每一塊的名字，拿掉就恢復乾淨。
-// 純看的開關——名字本來就寫在 HTML 的 data-name 上，這裡只負責開燈。
-const syncLabels = () =>
-  document.body.toggleAttribute('data-labels', location.hash === '#labels')
-syncLabels()
-window.addEventListener('hashchange', syncLabels)
+// 認識元件開關：只在自己電腦上預覽時出現，上線版連按鈕都不會有。
+// 名字本來就寫在每塊的 data-name 上，這顆按鈕只負責開燈關燈。
+const isLocal = location.protocol === 'file:' ||
+  ['localhost', '127.0.0.1', ''].includes(location.hostname)
+
+if (isLocal) {
+  const btn = document.createElement('button')
+  btn.className = 'label-toggle'
+  btn.textContent = '顯示名稱'
+  btn.title = '每一塊都有名字，想改哪裡就跟 AI 說那個名字'
+  btn.addEventListener('click', () => {
+    const on = document.body.toggleAttribute('data-labels')
+    btn.textContent = on ? '隱藏名稱' : '顯示名稱'
+  })
+  document.body.appendChild(btn)
+}
