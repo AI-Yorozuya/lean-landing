@@ -21,18 +21,18 @@ document.querySelectorAll('.links a[href^="#"], .brand').forEach((a) => {
 })
 
 // 認識元件開關：只在自己電腦上預覽時出現，上線版連按鈕都不會有。
-// 名字本來就寫在每塊的 data-name 上，這顆按鈕只負責開燈關燈。
+// 名稱本來就寫在每個區塊／元件的 data-name 上，這顆按鈕只負責開燈關燈。
 const isLocal = location.protocol === 'file:' ||
   ['localhost', '127.0.0.1', ''].includes(location.hostname)
 
 if (isLocal) {
   const btn = document.createElement('button')
   btn.className = 'label-toggle'
-  btn.textContent = '顯示名字'
-  btn.title = '每一塊都有名字，想改哪裡就跟 AI 說那個名字'
+  btn.textContent = '顯示區塊及元件名稱'
+  btn.title = '想改哪裡，就跟 AI 說那個區塊或元件的名稱'
   btn.addEventListener('click', () => {
     const on = document.body.toggleAttribute('data-labels')
-    btn.textContent = on ? '隱藏名字' : '顯示名字'
+    btn.textContent = on ? '隱藏區塊及元件名稱' : '顯示區塊及元件名稱'
   })
   document.body.appendChild(btn)
 }
