@@ -90,7 +90,6 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 40px); }
   background: var(--surface); border: 1px solid var(--line);
   border-radius: var(--radius); padding: 30px 26px;
 }
-.card .num { font-family: var(--serif); font-size: 14px; color: var(--accent); font-weight: 700; }
 .card h3 { font-size: 19px; margin: 12px 0 8px; }
 .card p { color: var(--muted); font-size: 15px; margin: 0; }
 

@@ -1,5 +1,5 @@
 # lean-landing → Cloudflare Workers Static Assets（純前端一頁式免費部署）
-# 部署：照 coach 劇本「亮相序列」——教練先把下面的 name 改成玩家取的網址名，再 `npx wrangler deploy`。
+# 部署：照 `landing-page/亮相序列.md`——先把下面的 name 改成玩家取的網址名，再 `npx wrangler deploy`。
 # 純靜態、無 Worker script、無 build：上傳的就是 site/ 這個資料夾。
 # 帳號只辦 CF（不碰 GitHub，一次一道註冊牆）。
 name = "lean-landing"
