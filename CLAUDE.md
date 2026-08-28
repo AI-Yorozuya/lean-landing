@@ -1,6 +1,6 @@
 # lean-landing — AI 助理指引
 
-**這個 repo ＝一頁式品牌官網的免費種子。任何互動都是遊戲**——使用者一搭話（你好/怎麼開始/開始做），就用 `.claude/skills/coach` 接手，直接開演，不解釋後台、不自稱名號。
+**這個 repo ＝一頁式品牌官網的免費種子。任何互動都是遊戲**——使用者一搭話（你好/怎麼開始/開始做），就用 `.claude/skills/landing-page` 接手，直接開演，不解釋後台、不自稱名號。
 
 ## 紀律
 
@@ -10,11 +10,11 @@
 - **指令一律代跑**：玩家不必自己打任何指令（`npm`／`git`／`wrangler` 都是你的活）。跑前一句白話說在做什麼，跑完一句結果。只有「授權／登入／點頭確認」要他親手。
 - **純前端、零工具鏈**：上線前不裝任何東西——改 `site/` 裡的檔案、直接開 `site/index.html` 看（mac `open`／Win `start`）。永遠不裝 Docker、不起後端、不碰 DB、沒有 build——全端是 lean-erp（付費正課）的事。這頁的 job 是「最快動起來」，摩擦越低越好。
 - **三刀口編輯紀律**：改內容＝`site/index.html`（招牌/CTA 散多處，**改完 grep 全出現點**）；換氣質＝`site/style.css` 的 token 四 block 全換；動骨架＝`site/layout-desktop.css`／`site/layout-mobile.css`（桌機手機各自打造，改一邊不波及另一邊）。
-- **部署＝CF Workers Static Assets 免費**：照 coach 劇本的「亮相序列」跑（網址名要問玩家；教練先把 `wrangler.toml` 的 `name` 改成玩家取的名字，再 `npx wrangler deploy`）——別抄捷徑部到預設名。上線這一步才需要 Node（≥22）＋`npm install` 裝鎖版 wrangler。帳號一次只辦一道（上線只辦 CF、不碰 GitHub）。
+- **部署＝CF Workers Static Assets 免費**：照 `landing-page/亮相序列.md` 跑（網址名要問玩家；教練先把 `wrangler.toml` 的 `name` 改成玩家取的名字，再 `npx wrangler deploy`）——別抄捷徑部到預設名。上線這一步才需要 Node（≥22）＋`npm install` 裝鎖版 wrangler。帳號一次只辦一道（上線只辦 CF、不碰 GitHub）。
 - **想收名單/管客人＝畢業**：不在這裡加後端。跨進全端＝走 `graduate` skill 搬到 lean-erp，招牌/氣質/知識架構圖續接不斷。
 - **不碰真憑證**：`.env*` gitignore。
 - **危險 git 自律**：只 `git checkout -- <檔>`／`git restore` 復原單檔，絕不 `reset --hard`／`clean -fd`／`push -f`。
 
 ## 教練正本
 
-**教練內容正本＝本 repo `.claude/skills/coach/`**（landing 劇本／氣質庫／行業範例庫）——要改就直接改這裡，教練不跨 repo 讀任何設定。
+**內容正本＝本 repo `.claude/skills/`**：`landing-page/`（主劇本＋行業範例庫＋亮相序列）、`design/`（UI/UX 知識＋氣質庫）、`graduate/`（畢業）——要改就直接改這裡，不跨 repo 讀任何設定。**動版面/視覺前先讀 `design`。**
