@@ -24,13 +24,19 @@ description: 一頁式官網的 UI/UX 設計知識層。改版面、換配色、
 | 名字 | 是哪一塊 |
 |---|---|
 | 招牌 brand | 左上角店名（分頁圖示 favicon 跟著它的首字） |
-| 導覽列 nav ／ 導覽連結 nav links ／ 小聯絡鈕 nav cta | 最上面那條與其中的東西 |
+| 導覽列 nav ／ 導覽連結 nav links ／ 導覽列聯絡鈕 nav cta | 最上面那條與其中的東西 |
 | 選單鈕 menu button | 手機版左下角的圓鈕（桌機不出現） |
-| 主視覺區 hero | 第一眼看到的整塊 |
-| 主標 hero title ／ 副標 hero text ／ 主鈕 hero cta ／ 主圖 hero image | hero 裡的四樣 |
-| 亮點區 features ／ 亮點卡 card ／ 卡標題 card title ／ 卡說明 card text | 三張平行賣點 |
-| 關於區 about ／ 關於標題 ／ 關於內文 ／ 次要鈕 about cta | 自我介紹那段 |
+| 開場區 hero | 第一眼看到的整塊 |
+| 標語 hero title ／ 開場介紹 hero description ／ 開場聯絡鈕 hero cta ／ 開場大圖 hero image | 開場區裡的四樣 |
+| 亮點區 features ／ 亮點卡 feature card ／ 亮點標題 card title ／ 亮點說明 card description | 三張平行賣點 |
+| 關於區 about ／ 關於標題 about title ／ 關於內文 about description ／ 關於區聯絡鈕 about cta | 自我介紹那段 |
 | 頁尾 footer | 最下面那條 |
+
+命名三條規矩（要加新元件時照這個取）：
+1. **中文用店家講得出口的話,不用設計行話**——「開場區」不是「主視覺區」,「標語」不是「主標」。
+2. **中英各說一次,不重複**——「開場區 hero」不是「開場區 hero section」（區＝section）;「開場聯絡鈕 hero cta」不是「…cta button」（鈕＝button）。
+3. **講功能不講視覺輕重**——「關於區聯絡鈕」不是「次要鈕」;玩家心裡它就是另一顆聯絡鈕。
+4. 排版用的容器不標（例如包住開場文字的那層 div）——玩家永遠不會指它,標了只是噪音。
 
 **三個地方拿得到這套名字**：`site/index.html` 檔頭的對照圖（打開檔案就看到）、每個區塊的 `data-name` 屬性、以及第三幕產的 `架構圖.md`。
 
