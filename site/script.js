@@ -19,3 +19,10 @@ document.querySelectorAll('.links a[href^="#"], .brand').forEach((a) => {
     el.scrollIntoView({ behavior: 'smooth' })
   })
 })
+
+// 認識元件模式：網址加 #labels 就在畫面上標出每一塊的名字，拿掉就恢復乾淨。
+// 純看的開關——名字本來就寫在 HTML 的 data-name 上，這裡只負責開燈。
+const syncLabels = () =>
+  document.body.toggleAttribute('data-labels', location.hash === '#labels')
+syncLabels()
+window.addEventListener('hashchange', syncLabels)

@@ -115,6 +115,24 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 40px); }
 }
 .foot .made { opacity: .7; }
 
+/* ══ 認識元件模式（網址加 #labels 才生效；平常一行樣式都不套）══ */
+[data-labels] [data-name] {
+  position: relative;
+  outline: 1px dashed color-mix(in srgb, var(--accent) 40%, transparent);
+  outline-offset: 4px;
+}
+[data-labels] [data-name]::before {
+  content: attr(data-name);
+  position: absolute; top: -9px; left: 0; z-index: 5;
+  background: var(--accent); color: var(--accent-ink);
+  font-family: var(--sans); font-size: 10px; font-weight: 600; letter-spacing: .04em;
+  padding: 2px 7px; border-radius: 4px; white-space: nowrap; pointer-events: none;
+}
+/* 導覽列在最上面：它裡面的名牌往下掛，否則會頂出視窗外看不到 */
+[data-labels] .nav [data-name]::before { top: auto; bottom: -9px; }
+/* 主視覺緊接在 sticky 導覽列下面：名牌收進自己的上留白，不然會被導覽列蓋住 */
+[data-labels] .hero::before { top: 6px; }
+
 /* ────────────────────────────────────────────────────────────────
    Q3 選氣質——教練把「四個 token block 全換」：:root、@media dark、
    [data-theme=light]、[data-theme=dark]（只換一半＝深色模式會壞）。

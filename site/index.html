@@ -15,6 +15,8 @@
   │  頁尾 footer         最下面那條                            │
   └────────────────────────────────────────────────────────┘
   例：「主標改成『十年手工麵包』」「主鈕改成加 LINE」「手機版把亮點區排到主視覺前面」
+  ▸ 想在畫面上直接看到這些名字：網址後面加 #labels（例 http://localhost:8788/#labels）。
+    拿掉就恢復乾淨——這是看的開關，不會被部署上線。
 
   三刀口（AI 的編輯紀律）：
   ・改內容＝本檔（招牌/CTA 散多處，改完 grep 全出現點）
@@ -48,31 +50,31 @@
 <!-- ══ 導覽列 nav ══ -->
 <header class="nav">
   <!-- 招牌 brand -->
-  <a class="brand" href="#top">你的招牌</a>
-  <nav class="links" id="links">
+  <a class="brand" data-name="招牌 brand" href="#top">你的招牌</a>
+  <nav class="links" data-name="導覽列 nav" id="links">
     <!-- 導覽連結 nav links -->
     <a href="#features">亮點</a>
     <a href="#about">關於</a>
     <!-- 小聯絡鈕 nav cta：href 換成 tel:0912345678／https://line.me/…／mailto: -->
-    <a class="cta-sm" href="mailto:hello@example.com">聯絡我</a>
+    <a class="cta-sm" data-name="小聯絡鈕 nav cta" href="mailto:hello@example.com">聯絡我</a>
   </nav>
   <!-- 選單鈕 menu button（只有手機版看得到，固定在左下）-->
-  <button class="burger" id="burger" aria-label="選單" aria-expanded="false">≡</button>
+  <button class="burger" data-name="選單鈕 menu button" id="burger" aria-label="選單" aria-expanded="false">≡</button>
 </header>
 
 <main id="top">
 
   <!-- ══ 主視覺區 hero ══ -->
-  <section class="hero">
+  <section class="hero" data-name="主視覺區 hero">
     <div class="hero-text">
       <!-- 主標 hero title：一句話說清楚替誰解決什麼（教練代擬，玩家點頭） -->
-      <h1>一句話說清楚，你替誰解決什麼。</h1>
+      <h1 data-name="主標 hero title">一句話說清楚，你替誰解決什麼。</h1>
       <!-- 副標 hero text -->
-      <p class="lede">把你最想讓人知道的一段話放這裡——你是誰、為什麼值得信任。</p>
+      <p class="lede" data-name="副標 hero text">把你最想讓人知道的一段話放這裡——你是誰、為什麼值得信任。</p>
       <!-- 主鈕 hero cta（整頁最重要的一顆，只有一種動作）-->
-      <a class="cta" href="mailto:hello@example.com">聯絡我</a>
+      <a class="cta" data-name="主鈕 hero cta" href="mailto:hello@example.com">聯絡我</a>
     </div>
-    <div class="hero-art">
+    <div class="hero-art" data-name="主圖 hero image">
       <!-- 【主視覺】換玩家的照片：整段 svg 換成 <img src="./你的檔名.jpg" alt="你的招牌">
            行業對得上就先掛 ./presets/ 的預設照。內建 SVG 用主題 token 上色，換氣質自己跟著變。 -->
       <svg viewBox="0 0 400 400" role="img" aria-label="你的招牌">
@@ -89,8 +91,8 @@
   </section>
 
   <!-- ══ 亮點區 features：三張平行賣點，不是步驟——所以不編號 ══ -->
-  <section id="features" class="features">
-    <article class="card">
+  <section id="features" class="features" data-name="亮點區 features">
+    <article class="card" data-name="亮點卡 card">
       <!-- 亮點卡 card：卡標題 card title ＋ 卡說明 card text（每張 ≤ 40 字）-->
       <h3>亮點一</h3>
       <p>你最強的一件事，用客人聽得懂的話講。</p>
@@ -106,7 +108,7 @@
   </section>
 
   <!-- ══ 關於區 about ══ -->
-  <section id="about" class="about">
+  <section id="about" class="about" data-name="關於區 about">
     <!-- 關於標題 about title -->
     <h2>關於 你的招牌</h2>
     <!-- 關於內文 about text -->
@@ -118,7 +120,7 @@
 </main>
 
 <!-- ══ 頁尾 footer ══ -->
-<footer class="foot">
+<footer class="foot" data-name="頁尾 footer">
   <span>© 你的招牌</span>
   <a class="made" href="https://aiyorozuya.com/learn" target="_blank" rel="noopener">用 AI 萬事屋做的 🐻</a>
 </footer>
