@@ -1,0 +1,36 @@
+/* 手機版骨架（max-width: 767.98px 時載入）——為手機專門打造，不是桌機版硬縮。
+   要重排手機版就整檔改這裡，桌機版一個字都不會動。 */
+
+/* 導覽：招牌留頂欄；選單收到左下角拇指區（單手就按得到——這就是手機版自己的設計） */
+/* 頂欄改實色：backdrop-filter 會把 fixed 子元素的定位基準搶成自己（Chrome），左下浮鈕會被拉回頂欄——手機版直接不用毛玻璃 */
+.nav { backdrop-filter: none; background: var(--bg); }
+.burger {
+  display: grid; place-items: center;
+  position: fixed; left: 16px; bottom: 16px; z-index: 30;
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--accent); color: var(--accent-ink);
+  font-size: 24px; line-height: 1;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .18);
+}
+.links {
+  position: fixed; left: 16px; bottom: 80px; z-index: 30;
+  flex-direction: column; gap: 4px; align-items: stretch;
+  min-width: 180px; padding: 10px;
+  background: var(--bg); border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .16);
+  display: none;
+}
+.links.open { display: flex; }
+.links a { padding: 12px 14px; border-radius: 8px; }
+.links .cta-sm { text-align: center; margin-top: 4px; }
+
+/* hero：直向堆疊、視覺在上 */
+.hero { grid-template-columns: 1fr; }
+.hero-art { width: min(100%, 300px); order: -1; }
+
+/* 亮點卡直向單欄 */
+.features { grid-template-columns: 1fr; }
+
+/* 頁尾墊高，別被左下浮鈕壓到 */
+.foot { padding-bottom: 88px; }

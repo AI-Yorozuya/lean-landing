@@ -1,0 +1,108 @@
+<!--
+  一頁式官網——內容唯一正本。三刀口編輯紀律：
+  ・改內容＝本檔（招牌/CTA 散多處，改完 grep 全出現點）
+  ・換氣質＝style.css 的 token（四個 block 全換）
+  ・動骨架＝layout-desktop.css／layout-mobile.css（桌機手機各自打造，改一邊不波及另一邊）
+-->
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 【招牌】瀏覽器分頁上的名字 -->
+  <title>你的招牌</title>
+  <link rel="icon" type="image/png" href="./bearhead.png" />
+  <link rel="stylesheet" href="./style.css" />
+  <!-- 兩版 layout：桌機一版、手機一版，各自做好——不是一版硬縮 -->
+  <link rel="stylesheet" href="./layout-desktop.css" media="(min-width: 768px)" />
+  <link rel="stylesheet" href="./layout-mobile.css" media="(max-width: 767.98px)" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+<!-- ══ 導覽列 ══ -->
+<header class="nav">
+  <!-- 【招牌】 -->
+  <a class="brand" href="#top">你的招牌</a>
+  <nav class="links" id="links">
+    <a href="#features">亮點</a>
+    <a href="#about">關於</a>
+    <!-- 【聯絡鈕】href 換成 tel:0912345678／https://line.me/…／mailto: -->
+    <a class="cta-sm" href="mailto:hello@example.com">聯絡我</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="選單" aria-expanded="false">≡</button>
+</header>
+
+<main id="top">
+
+  <!-- ══ 主視覺 ══ -->
+  <section class="hero">
+    <div class="hero-text">
+      <!-- 【標語】一句話說清楚替誰解決什麼（教練代擬，玩家點頭） -->
+      <h1>一句話說清楚，你替誰解決什麼。</h1>
+      <!-- 【自介】 -->
+      <p class="lede">把你最想讓人知道的一段話放這裡——你是誰、為什麼值得信任。</p>
+      <!-- 【聯絡鈕】 -->
+      <a class="cta" href="mailto:hello@example.com">聯絡我</a>
+    </div>
+    <div class="hero-art">
+      <!-- 【主視覺】換玩家的照片：整段 svg 換成 <img src="./你的檔名.jpg" alt="你的招牌">
+           行業對得上就先掛 ./presets/ 的預設照。內建 SVG 用主題 token 上色，換氣質自己跟著變。 -->
+      <svg viewBox="0 0 400 400" role="img" aria-label="你的招牌">
+        <circle cx="230" cy="150" r="120" fill="var(--accent)" opacity=".14" />
+        <circle cx="230" cy="150" r="74" fill="var(--accent)" opacity=".22" />
+        <rect x="40" y="196" width="250" height="150" rx="18" fill="var(--surface)" stroke="var(--line)" />
+        <rect x="66" y="226" width="112" height="11" rx="5.5" fill="var(--accent)" />
+        <rect x="66" y="252" width="196" height="8" rx="4" fill="var(--muted)" opacity=".32" />
+        <rect x="66" y="272" width="160" height="8" rx="4" fill="var(--muted)" opacity=".32" />
+        <rect x="66" y="302" width="84" height="24" rx="12" fill="var(--accent)" />
+        <circle cx="316" cy="286" r="30" fill="var(--accent)" opacity=".16" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ══ 三張亮點卡（每張 desc ≤ 40 字，三張剛好別貪多）══ -->
+  <section id="features" class="features">
+    <article class="card">
+      <span class="num">01</span>
+      <h3>亮點一</h3>
+      <p>你最強的一件事，用客人聽得懂的話講。</p>
+    </article>
+    <article class="card">
+      <span class="num">02</span>
+      <h3>亮點二</h3>
+      <p>第二個讓人選你的理由。</p>
+    </article>
+    <article class="card">
+      <span class="num">03</span>
+      <h3>亮點三</h3>
+      <p>第三個。三張剛好，別貪多。</p>
+    </article>
+  </section>
+
+  <!-- ══ 關於 ══ -->
+  <section id="about" class="about">
+    <!-- 【招牌】 -->
+    <h2>關於 你的招牌</h2>
+    <!-- 【自介】 -->
+    <p>把你最想讓人知道的一段話放這裡——你是誰、為什麼值得信任。</p>
+    <!-- 【聯絡鈕】 -->
+    <a class="cta ghost" href="mailto:hello@example.com">聯絡我</a>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <!-- 【招牌】 -->
+  <span>© 你的招牌</span>
+  <a class="made" href="https://aiyorozuya.com/learn" target="_blank" rel="noopener">用 AI 萬事屋做的 🐻</a>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

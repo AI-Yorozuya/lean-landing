@@ -1,6 +1,9 @@
-# lean-landing → Cloudflare Pages（純前端一頁式免費部署）
-# 部署：照 coach 劇本「亮相序列」（--project-name 帶玩家取的名；下面的 name 只是預設，會被蓋過）
-# 玩家亮相時教練代打；帳號只辦 CF（不碰 GitHub，一次一道註冊牆）。
+# lean-landing → Cloudflare Workers Static Assets（純前端一頁式免費部署）
+# 部署：照 coach 劇本「亮相序列」——教練先把下面的 name 改成玩家取的網址名，再 `npx wrangler deploy`。
+# 純靜態、無 Worker script、無 build：上傳的就是 site/ 這個資料夾。
+# 帳號只辦 CF（不碰 GitHub，一次一道註冊牆）。
 name = "lean-landing"
-pages_build_output_dir = "dist"
-compatibility_date = "2026-07-23"
+compatibility_date = "2026-08-27"
+
+[assets]
+directory = "site"

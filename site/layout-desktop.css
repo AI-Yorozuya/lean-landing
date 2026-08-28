@@ -1,0 +1,12 @@
+/* 桌機版骨架（min-width: 768px 時載入）。
+   手機版在 layout-mobile.css——兩版各自打造，改這檔不會動到手機版。 */
+
+.burger { display: none; }
+.links { display: flex; align-items: center; gap: 28px; }
+
+/* hero：文字左、視覺右 */
+.hero { grid-template-columns: minmax(0, 1fr) minmax(0, .8fr); }
+.hero-art { width: min(100%, 400px); }
+
+/* 亮點卡三欄並排 */
+.features { grid-template-columns: repeat(3, 1fr); }

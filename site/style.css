@@ -1,4 +1,6 @@
-/* 一頁式品牌官網——主題 token（本 repo 即純前端種子）。
+/* 一頁式品牌官網——共用樣式與主題 token。
+   三刀口：改內容＝index.html（改完 grep 全出現點）、換氣質＝本檔 token、
+   動骨架＝layout-desktop.css／layout-mobile.css（桌機、手機各自打造，互不波及）。
    「選氣質」(Q3) = 只換下面 :root 這組 token。四組預設見檔尾註解，教練整段替換即可。
    預設 = 專業沉穩（中性、可安全套任何行業）。*/
 :root {
@@ -37,7 +39,7 @@ body {
 }
 a { color: inherit; text-decoration: none; cursor: pointer; }
 
-/* ── nav ── */
+/* ── nav（排列細節在 layout 檔，這裡是共用外觀）── */
 .nav {
   position: sticky; top: 0; z-index: 20;
   display: flex; align-items: center; justify-content: space-between;
@@ -47,7 +49,6 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
   border-bottom: 1px solid var(--line);
 }
 .brand { font-family: var(--serif); font-weight: 700; font-size: 20px; letter-spacing: .5px; }
-.links { display: flex; align-items: center; gap: 28px; }
 .links a { color: var(--muted); font-size: 15px; transition: color .15s; }
 .links a:hover { color: var(--ink); }
 .links .cta-sm {
@@ -55,18 +56,16 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
   padding: 8px 18px; border-radius: 100px; font-weight: 600;
 }
 .links .cta-sm:hover { color: var(--accent-ink); filter: brightness(1.06); }
-.burger { display: none; background: none; border: none; color: var(--ink); font-size: 26px; cursor: pointer; }
+.burger { background: none; border: none; color: var(--ink); font-size: 26px; cursor: pointer; }
 
-/* ── hero ── */
+/* ── 版心與 hero（欄位排法在 layout 檔）── */
 main { max-width: 1080px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 40px); }
-/* hero：桌機文字左、視覺右；視覺是主題色畫的，換氣質自己跟著換 */
 .hero {
   padding: clamp(56px, 10vw, 112px) 0 clamp(56px, 9vw, 100px);
-  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .8fr);
-  gap: clamp(32px, 6vw, 72px); align-items: center;
+  display: grid; gap: clamp(32px, 6vw, 72px); align-items: center;
 }
 .hero-text { max-width: 640px; }
-.hero-art { justify-self: center; width: min(100%, 400px); }
+.hero-art { justify-self: center; }
 .hero-art svg, .hero-art img { display: block; width: 100%; height: auto; }
 .hero-art img { aspect-ratio: 1; object-fit: cover; border-radius: var(--radius); }
 .hero h1 {
@@ -85,8 +84,8 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 40px); }
 .cta.ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
 .cta.ghost:hover { border-color: var(--accent); color: var(--accent); }
 
-/* ── features ── */
-.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 20px 0 clamp(56px, 9vw, 100px); }
+/* ── features 卡片外觀（欄數在 layout 檔）── */
+.features { display: grid; gap: 20px; padding: 20px 0 clamp(56px, 9vw, 100px); }
 .card {
   background: var(--surface); border: 1px solid var(--line);
   border-radius: var(--radius); padding: 30px 26px;
@@ -110,22 +109,6 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 40px); }
   border-top: 1px solid var(--line); color: var(--muted); font-size: 14px;
 }
 .foot .made { opacity: .7; }
-
-@media (max-width: 720px) {
-  .burger { display: block; }
-  .links {
-    position: absolute; top: 100%; right: 0; left: 0;
-    flex-direction: column; gap: 4px; align-items: stretch;
-    padding: 12px 20px 20px; background: var(--bg); border-bottom: 1px solid var(--line);
-    display: none;
-  }
-  .links.open { display: flex; }
-  .links a { padding: 10px 4px; }
-  .links .cta-sm { text-align: center; }
-  .features { grid-template-columns: 1fr; }
-  .hero { grid-template-columns: 1fr; }
-  .hero-art { width: min(100%, 300px); order: -1; }
-}
 
 /* ────────────────────────────────────────────────────────────────
    Q3 選氣質——教練把「四個 token block 全換」：:root、@media dark、
