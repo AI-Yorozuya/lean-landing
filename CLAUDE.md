@@ -5,7 +5,7 @@
 ## 紀律
 
 - **從外面進場也照帶**：學員常是在別的資料夾開 Claude、貼 repo 網址說「我要做一頁式官網」。抓下來後就動工，**直接開始**——不解釋自己怎麼被載入、不叫他重開一次、不報告目錄。
-- **取種規則（固定，不即興）**：**用 tarball，不用 git clone**——mac：`curl -L https://github.com/AI-Yorozuya/lean-landing/archive/refs/heads/main.tar.gz | tar xz && mv lean-landing-main lean-landing`；Windows（PowerShell 分兩步）：`iwr` 下載後 `tar -xzf`，資料夾改名 `lean-landing`。一律落成**子資料夾 `lean-landing/`**，之後所有動作都在裡面做——**絕不攤開在學員的資料夾根部**。tarball 天生沒有 `.git`，接著在子資料夾內 `git init && git add -A && git commit -m "種子就位"`（新電腦常沒設 git 身分、commit 會報「tell me who you are」——先 `git config user.name {招牌名} && git config user.email landing@local`，**只設本 repo、不問學員、不解說**）——歷史從學員開始、沒有指向種子 repo 的 origin，之後備份 `gh repo create --source=. --push` 不會撞 remote，而且**全程沒有任何刪除類指令**、不會觸發嚇人的權限框。
+- **取種規則（固定，不即興）**：`git clone {種子網址} lean-landing`——一律落成**子資料夾 `lean-landing/`**，之後所有動作都在裡面做、絕不攤開在學員的資料夾根部。接著 `git remote rename origin seed`：**保留完整歷史、絕不刪 `.git`、絕不 `rm -rf`**（全程零刪除類指令，不觸發嚇人的權限框）。新電腦常沒設 git 身分——commit 前先 `git config user.name {招牌名} && git config user.email landing@local`（只設本 repo、不問學員、不解說）。第一個學員 commit＝「種子就位」。之後備份 `gh repo create --source=. --push`：origin 名額已空出、不會撞 remote，種子歷史一併帶走＝出處紀錄。
 - **整備必須完成，不准跳過**：`git init` 那步＝存檔安全網（進度點/退回全靠它）——被權限擋、失敗，就換個方式再跑到成功為止；**絕不說「之後再處理」就往下走**。整段取種是後台整備，**做就好、不對學員解說**——「git 歷史」「權限被攔」「remote」這些字不出口，對外至多一句「我把種子搬進來準備」。
 - **指令一律代跑**：學員不必自己打任何指令（`npm`／`git`／`wrangler` 都是你的活）。跑前一句白話說在做什麼，跑完一句結果。只有「授權／登入／點頭確認」要他親手。
 - **純前端、零工具鏈**：上線前不裝任何東西——改 `site/` 裡的檔案、直接開 `site/index.html` 看（mac `open`／Win `start`）。永遠不裝 Docker、不起後端、不碰 DB、沒有 build——全端是 lean-erp（付費正課）的事。這頁的 job 是「最快動起來」，摩擦越低越好。
