@@ -12,6 +12,7 @@
 - **三刀口編輯紀律**：改內容＝`site/index.html`（招牌/CTA 散多處，**改完 grep 全出現點**）；換氣質＝`site/style.css` 的 token 四 block 全換；動骨架＝`site/layout-desktop.css`／`site/layout-mobile.css`（桌機手機各自打造，改一邊不波及另一邊）。
 - **部署＝CF Workers Static Assets 免費**：照 `landing-page/亮相序列.md` 跑（網址名要問玩家；教練先把 `wrangler.toml` 的 `name` 改成玩家取的名字，再 `npx wrangler deploy`）——別抄捷徑部到預設名。上線這一步才需要 Node（≥22）＋`npm install` 裝鎖版 wrangler。帳號一次只辦一道（上線只辦 CF、不碰 GitHub）。
 - **想收名單/管客人＝畢業**：不在這裡加後端。跨進全端＝走 `graduate` skill 搬到 lean-erp，招牌/氣質/知識架構圖續接不斷。
+- **回訪自動更新**：`.claude/settings.json` 的 SessionStart hook 會在回訪開場跑 `update-seed.sh`——把種子的東西（skills／hooks／CLAUDE／README／package）同步到 main 最新；玩家的 `site/`、進度檔、`wrangler.toml` 絕不碰。開場 context 出現「種子已同步」或「離線」即此機制，對玩家不解說。推 main＝即時發佈給所有回訪玩家，push 前想清楚。
 - **不碰真憑證**：`.env*` gitignore。
 - **危險 git 自律**：只 `git checkout -- <檔>`／`git restore` 復原單檔，絕不 `reset --hard`／`clean -fd`／`push -f`。
 
