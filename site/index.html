@@ -48,15 +48,15 @@
 <body>
 
 <!-- ══ 導覽列 nav ══ -->
-<header class="nav">
+<header class="nav" data-name="導覽列 nav">
   <!-- 招牌 brand -->
   <a class="brand" data-name="招牌 brand" href="#top">你的招牌</a>
-  <nav class="links" data-name="導覽列 nav" id="links">
+  <nav class="links" data-name="導覽連結 nav links" id="links">
     <!-- 導覽連結 nav links -->
     <a href="#features">亮點</a>
     <a href="#about">關於</a>
     <!-- 小聯絡鈕 nav cta：href 換成 tel:0912345678／https://line.me/…／mailto: -->
-    <a class="cta-sm" data-name="小聯絡鈕 nav cta" href="mailto:hello@example.com">聯絡我</a>
+    <a class="cta-sm" data-name="導覽列聯絡鈕 nav cta button" href="mailto:hello@example.com">聯絡我</a>
   </nav>
   <!-- 選單鈕 menu button（只有手機版看得到，固定在左下）-->
   <button class="burger" data-name="選單鈕 menu button" id="burger" aria-label="選單" aria-expanded="false">≡</button>
@@ -65,14 +65,14 @@
 <main id="top">
 
   <!-- ══ 主視覺區 hero ══ -->
-  <section class="hero" data-name="主視覺區 hero">
-    <div class="hero-text">
+  <section class="hero" data-name="主視覺區 hero section">
+    <div class="hero-text" data-name="主視覺文字 hero text">
       <!-- 主標 hero title：一句話說清楚替誰解決什麼（教練代擬，玩家點頭） -->
       <h1 data-name="主標 hero title">一句話，說清楚你在做什麼。</h1>
       <!-- 副標 hero text -->
-      <p class="lede" data-name="副標 hero text">再兩三句話，讓客人知道你是誰、做多久了、為什麼可以放心找你。</p>
+      <p class="lede" data-name="副標 hero description">再兩三句話，讓客人知道你是誰、做多久了、為什麼可以放心找你。</p>
       <!-- 主鈕 hero cta（整頁最重要的一顆，只有一種動作）-->
-      <a class="cta" data-name="主鈕 hero cta" href="mailto:hello@example.com">聯絡我</a>
+      <a class="cta" data-name="主鈕 hero cta button" href="mailto:hello@example.com">聯絡我</a>
     </div>
     <div class="hero-art" data-name="主圖 hero image">
       <!-- 主圖 hero image：預設先掛一張，Q1 答完換成對得上的行業預設照
@@ -83,30 +83,30 @@
   </section>
 
   <!-- ══ 亮點區 features：三張平行賣點，不是步驟——所以不編號 ══ -->
-  <section id="features" class="features" data-name="亮點區 features">
-    <article class="card" data-name="亮點卡 card">
+  <section id="features" class="features" data-name="亮點區 features section">
+    <article class="card" data-name="亮點卡 feature card">
       <!-- 亮點卡 card：卡標題 card title ＋ 卡說明 card text（每張 ≤ 40 字）-->
-      <h3>你最拿手的</h3>
-      <p>用客人聽得懂的話講，不要行話。</p>
+      <h3 data-name="卡標題 card title">你最拿手的</h3>
+      <p data-name="卡說明 card description">用客人聽得懂的話講，不要行話。</p>
     </article>
-    <article class="card">
-      <h3>客人常說的好</h3>
-      <p>他們回頭的理由，通常就是這個。</p>
+    <article class="card" data-name="亮點卡 feature card">
+      <h3 data-name="卡標題 card title">客人常說的好</h3>
+      <p data-name="卡說明 card description">他們回頭的理由，通常就是這個。</p>
     </article>
-    <article class="card">
-      <h3>跟別人不一樣的</h3>
-      <p>三個剛好，別貪多。</p>
+    <article class="card" data-name="亮點卡 feature card">
+      <h3 data-name="卡標題 card title">跟別人不一樣的</h3>
+      <p data-name="卡說明 card description">三個剛好，別貪多。</p>
     </article>
   </section>
 
   <!-- ══ 關於區 about ══ -->
-  <section id="about" class="about" data-name="關於區 about">
+  <section id="about" class="about" data-name="關於區 about section">
     <!-- 關於標題 about title -->
-    <h2>關於 你的招牌</h2>
-    <!-- 關於內文 about text -->
-    <p>再兩三句話，讓客人知道你是誰、做多久了、為什麼可以放心找你。</p>
+    <h2 data-name="關於標題 about title">關於 你的招牌</h2>
+    <!-- 關於內文 about description -->
+    <p data-name="關於內文 about description">再兩三句話，讓客人知道你是誰、做多久了、為什麼可以放心找你。</p>
     <!-- 次要鈕 about cta（外框樣式，比主鈕安靜）-->
-    <a class="cta ghost" href="mailto:hello@example.com">聯絡我</a>
+    <a class="cta ghost" data-name="次要鈕 about cta button" href="mailto:hello@example.com">聯絡我</a>
   </section>
 
 </main>

@@ -115,23 +115,42 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 40px); }
 }
 .foot .made { opacity: .7; }
 
-/* ══ 認識元件模式（網址加 #labels 才生效；平常一行樣式都不套）══ */
+/* ══ 認識元件模式（本機按右下角按鈕才開；平常一行樣式都不套）══
+   紀律：名牌一律不壓在內容上——每個帶名牌的元件都先空出自己的位置，
+   名牌就坐在那塊空位裡。巢狀也成立：子元件的空位在父元件內部，各據各的。*/
+[data-labels] {
+  --label-gap: 30px;          /* 每個元件上方空出來放名牌的高度 */
+  padding-top: var(--label-gap); /* 最上面的導覽列也要有位置放它的名牌 */
+  overflow-x: hidden;          /* 名牌比元件寬時不讓整頁能橫捲 */
+}
 [data-labels] [data-name] {
   position: relative;
-  outline: 1px dashed color-mix(in srgb, var(--accent) 40%, transparent);
+  margin-top: var(--label-gap);
+  outline: 1px dashed color-mix(in srgb, var(--accent) 45%, transparent);
   outline-offset: 4px;
 }
 [data-labels] [data-name]::before {
   content: attr(data-name);
-  position: absolute; top: -9px; left: 0; z-index: 5;
+  position: absolute; left: 0; bottom: 100%; margin-bottom: 7px; z-index: 6;
   background: var(--accent); color: var(--accent-ink);
-  font-family: var(--sans); font-size: 10px; font-weight: 600; letter-spacing: .04em;
-  padding: 2px 7px; border-radius: 4px; white-space: nowrap; pointer-events: none;
+  font-family: var(--sans); font-size: 12px; font-weight: 600; line-height: 1.5;
+  letter-spacing: .02em; padding: 2px 9px; border-radius: 5px;
+  white-space: nowrap; pointer-events: none;
 }
-/* 導覽列在最上面：它裡面的名牌往下掛，否則會頂出視窗外看不到 */
-[data-labels] .nav [data-name]::before { top: auto; bottom: -9px; }
-/* 主視覺緊接在 sticky 導覽列下面：名牌收進自己的上留白，不然會被導覽列蓋住 */
-[data-labels] .hero::before { top: 6px; }
+/* 貼在右緣的元件：名牌改靠右，不然長名字會被裁掉 */
+[data-labels] .links[data-name]::before,
+[data-labels] .cta-sm[data-name]::before { left: auto; right: 0; }
+/* 行內元素要變成 inline-block，margin-top 才推得動 */
+[data-labels] .brand[data-name],
+[data-labels] .cta-sm[data-name] { display: inline-block; }
+/* 導覽列在最頂端：認識模式下不釘住，免得長高之後蓋住內容 */
+[data-labels] .nav { position: static; }
+/* 手機版名牌縮小，長名字才不會擠爆窄螢幕 */
+@media (max-width: 767.98px) {
+  [data-labels] { --label-gap: 26px; }
+  [data-labels] [data-name]::before { font-size: 10px; padding: 2px 7px; }
+}
+
 /* 開關按鈕本人（只在本機由 script.js 生出來）*/
 .label-toggle {
   position: fixed; right: 16px; bottom: 16px; z-index: 40;
